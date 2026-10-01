@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Selection Sort</title>
+    <link rel="stylesheet" href="experiment.css">
+</head>
+<body>
+    <h1>Selection Sort</h1>
+    <p>Selection Sort repeatedly finds the smallest element from the unsorted part of an array and places it at the beginning of that part.</p>
+
+<div class="section-card">
+<h2>Concept</h2>
+<p>
+    Selection Sort is a simple sorting technique that divides the array into
+    sorted and unsorted parts. It repeatedly finds the smallest element from
+    the unsorted part and swaps it with the first element of the unsorted part.
+    This process continues until the entire array is sorted.
+</p>
+
+<h3>Example:</h3>
+<p>
+    Array: [5, 3, 8, 4, 2]<br>
+    Find the smallest element → 2<br>
+    Swap 2 with 5 → [2, 3, 8, 4, 5]<br>
+    Find the smallest element from the remaining part → 3<br>
+    3 is already in the correct position.<br>
+    Continue the same process until the array is sorted.
+</p>
+</div>
+<div class="section-card">
+<h4>Important</h4>
+<p>
+    Selection Sort selects the smallest element from the unsorted part
+    and places it at the beginning of the unsorted part.
+</p>
+
+<h3>Time Complexity</h3>
+<p>Best case: O(n²)</p>
+<p>Average case: O(n²)</p>
+<p>Worst case: O(n²)</p>
+</div>
+<div class="section-card">
+<h2>Procedure</h2>
+<ol>
+    <li>Start with the first element of the array.</li>
+    <li>Assume the first element is the smallest element.</li>
+    <li>Compare it with the remaining elements in the unsorted part.</li>
+    <li>Find the smallest element in the unsorted part.</li>
+    <li>Swap the smallest element with the first element of the unsorted part.</li>
+    <li>Move to the next position and repeat the same process.</li>
+    <li>Continue until the entire array is sorted.</li>
+</ol>
+</div>
+<div class="section-card">
+<h2>Implementation</h2>
+
+<h3>Problem</h3>
+<p>
+    Write a Java program to sort an array using the Selection Sort technique.
+    The program should repeatedly find the smallest element from the unsorted
+    part and place it in its correct position.
+</p>
+
+<pre>
+    <code>
+        import java.util.*;
+
+        public class Selection_Sort{
+            public static void main(String[]args){
+
+                Scanner sc=new Scanner(System.in);
+
+                System.out.println("enter no.of elements:");
+                int n=sc.nextInt();
+
+                int[] arr=new int[n];
+
+                System.out.println("Enter your elements:");
+                for(int i=0;i&lt;arr.length;i++){
+                    arr[i]=sc.nextInt();
+                }
+
+                for(int i=0;i&lt;arr.length-1;i++){
+
+                    int min=i;
+
+                    for(int j=i+1;j&lt;arr.length;j++){
+
+                        if(arr[j]&lt;arr[min]){
+                            min=j;
+                        }
+                    }
+
+                    int temp=arr[i];
+                    arr[i]=arr[min];
+                    arr[min]=temp;
+                }
+
+                System.out.println("Sorted array:");
+
+                for(int i=0;i&lt;arr.length;i++){
+                    System.out.print(arr[i]+" ");
+                }
+            }
+        }
+    </code>
+</pre>
+</div>
+<div class="section-card">
+<h3>Expected Output</h3>
+<pre>
+    <code>
+        enter no.of elements:
+        5
+        Enter your elements:
+        5 3 8 4 2
+        Sorted array:
+        2 3 4 5 8
+    </code>
+</pre>
+</div>
+<div class="section-card">
+<h2>Viva</h2>
+
+<h3>Question 1</h3>
+<p>What is Selection Sort?</p>
+<p>
+    Selection Sort is a sorting technique that repeatedly finds the smallest
+    element from the unsorted part and places it in the correct position.
+</p>
+
+<h3>Question 2</h3>
+<p>What does Selection Sort find during each pass?</p>
+<p>
+    It finds the smallest element from the unsorted part of the array.
+</p>
+
+<h3>Question 3</h3>
+<p>What is the time complexity of Selection Sort?</p>
+<p>
+    Best case: O(n²), Average case: O(n²), Worst case: O(n²).
+</p>
+
+<h3>Question 4</h3>
+<p>Does Selection Sort require an extra array for sorting?</p>
+<p>
+    No. Selection Sort sorts the array in-place using a small amount of extra memory.
+</p>
+
+<h3>Question 5</h3>
+<p>What happens after each pass in Selection Sort?</p>
+<p>
+    The smallest element from the unsorted part is placed in its correct position.
+</p>
+</div>
+<h2>Practice</h2>
+
+<h3>Practice Question 1</h3>
+<div class="practice-card">
+<p>
+    Given the array [5, 3, 8, 4, 2], what is the first element after the first
+    pass of Selection Sort?
+</p>
+<ul>
+    <li><input type="radio" name="question1" value="1">A) 5</li>
+    <li><input type="radio" name="question1" value="2">B) 3</li>
+    <li><input type="radio" name="question1" value="3">C) 2</li>
+    <li><input type="radio" name="question1" value="4">D) 4</li>
+</ul>
+<button onclick="checkAnswer(1)">Submit Answer</button>
+<p id="result1"></p>
+</div>
+<div class="practice-card">
+<h3>Practice Question 2</h3>
+<p>What is the time complexity of Selection Sort in the worst case?</p>
+<ul>
+    <li><input type="radio" name="question2" value="1">A) O(1)</li>
+    <li><input type="radio" name="question2" value="2">B) O(n)</li>
+    <li><input type="radio" name="question2" value="3">C) O(log n)</li>
+    <li><input type="radio" name="question2" value="4">D) O(n²)</li>
+</ul>
+<button onclick="checkAnswer(2)">Submit Answer</button>
+<p id="result2"></p>
+</div>
+<div class="practice-card">
+<h3>Practice Question 3</h3>
+<p>
+    Which element does Selection Sort place at the beginning of the unsorted part?
+</p>
+<ul>
+    <li><input type="radio" name="question3" value="1">A) Largest element</li>
+    <li><input type="radio" name="question3" value="2">B) Smallest element</li>
+    <li><input type="radio" name="question3" value="3">C) Middle element</li>
+    <li><input type="radio" name="question3" value="4">D) Last element</li>
+</ul>
+<button onclick="checkAnswer(3)">Submit Answer</button>
+<p id="result3"></p>
+</div>
+<a href="java_lab.html">Back to Java Lab</a>
+
+<script>
+    const question1 = {
+        number: 1,
+        correctAnswer: 3
+    };
+
+    const question2 = {
+        number: 2,
+        correctAnswer: 4
+    };
+
+    const question3 = {
+        number: 3,
+        correctAnswer: 2
+    };
+
+    function checkAnswer(questionNumber){
+
+        let currentQuestion;
+
+        if(questionNumber == 1){
+            currentQuestion = question1;
+        }
+        else if(questionNumber == 2){
+            currentQuestion = question2;
+        }
+        else{
+            currentQuestion = question3;
+        }
+
+        const correctMessage = "correct!";
+        const selected = document.querySelector(
+            'input[name="question'+questionNumber+'"]:checked'
+        );
+
+        const result = document.querySelector("#result"+questionNumber);
+
+        if(selected == null){
+            result.textContent = "Please select an answer!";
+            return;
+        }
+
+        if(selected.value == currentQuestion.correctAnswer){
+            result.textContent = "Question "+currentQuestion.number+": "+correctMessage;
+        }
+        else{
+            result.textContent =
+                "Incorrect! The correct Answer is: "+
+                currentQuestion.correctAnswer;
+        }
+    }
+</script>
+```
+
+</body>

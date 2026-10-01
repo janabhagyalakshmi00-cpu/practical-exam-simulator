@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+    line-height: 1.7;
+    padding-bottom: 60px;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+body > h1 {
+    background: #172033;
+    color: white;
+    padding: 45px 20px 15px;
+    text-align: center;
+    font-size: 38px;
+}
+
+body > h1 + p {
+    background: #172033;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 0 20px 45px;
+    font-size: 16px;
+}
+
+
+/* =========================
+   SECTION CARDS
+========================= */
+
+.section-card {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 32px 38px;
+
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+.section-card h2 {
+    color: #172033;
+    font-size: 25px;
+    margin-bottom: 18px;
+    border-left: 4px solid #2563eb;
+    padding-left: 12px;
+}
+
+.section-card h3 {
+    color: #334155;
+    margin-top: 22px;
+    margin-bottom: 8px;
+}
+
+.section-card h4 {
+    color: #2563eb;
+    margin-top: 20px;
+}
+
+.section-card p {
+    color: #475569;
+    font-size: 16px;
+}
+
+
+/* =========================
+   PROCEDURE LIST
+========================= */
+
+.section-card ol {
+    padding-left: 25px;
+}
+
+.section-card ol li {
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+
+/* =========================
+   CODE
+========================= */
+
+pre {
+    margin-top: 15px;
+    padding: 22px;
+
+    background: #0f172a;
+    color: #e2e8f0;
+
+    border-radius: 8px;
+    overflow-x: auto;
+
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+
+/* =========================
+   VIVA
+========================= */
+
+.viva-card {
+    margin-top: 18px;
+    padding: 20px 24px;
+
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #2563eb;
+
+    border-radius: 7px;
+}
+
+.viva-card h3 {
+    margin-top: 0;
+    color: #2563eb;
+}
+
+.viva-card p {
+    margin-top: 6px;
+}
+
+
+/* =========================
+   PRACTICE
+========================= */
+
+body > h2 {
+    max-width: 1000px;
+    margin: 50px auto 20px;
+
+    font-size: 28px;
+    color: #172033;
+
+    border-left: 4px solid #2563eb;
+    padding-left: 12px;
+}
+
+body > h3 {
+    max-width: 1000px;
+    margin: 25px auto 12px;
+    color: #334155;
+}
+
+.practice-card {
+    max-width: 1000px;
+    margin: 0 auto 25px;
+    padding: 25px 30px;
+
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.05);
+}
+
+.practice-card h3 {
+    color: #172033;
+    margin-bottom: 12px;
+}
+
+.practice-card ul {
+    list-style: none;
+    padding: 12px 0;
+}
+
+.practice-card li {
+    padding: 8px 0;
+    color: #475569;
+}
+
+.practice-card input {
+    margin-right: 8px;
+}
+
+button {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.practice-card p[id^="result"] {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+body > a {
+    display: block;
+    width: fit-content;
+
+    margin: 45px auto 0;
+    padding: 12px 22px;
+
+    background: #172033;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+body > a:hover {
+    background: #2563eb;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    body > h1 {
+        font-size: 30px;
+    }
+
+    .section-card,
+    .practice-card {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 24px 20px;
+    }
+
+    body > h2,
+    body > h3 {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    pre {
+        font-size: 12px;
+    }
+}

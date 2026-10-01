@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<head>
+    <title>Binary Search</title>
+    <link rel="stylesheet" href="experiment.css">
+</head>
+<body>
+    <h1>Binary Search</h1>
+    <p>Binary Search finds an element in a sorted array by repeatedly dividing the search range into two halves.</p>
+    <div class="section-card">
+    <h2>Concept</h2>
+    <p>Binary Search is a searching technique used to find an element in a sorted array. It checks the middle element and compares it with the target. Based on the comparison, it eliminates half of the search area and continues searching until the element is found or the search area becomes empty.</p>
+    <h3>Example</h3>
+    <p>
+      Array: [10, 20, 30, 40, 50]<br>
+      Search element: 40<br>
+      Middle element is 30.<br>
+      40 is greater than 30, so search the right half.<br>
+      Next middle element is 40.<br>
+      40 is found<br>
+    </p>
+    <h4>Important</h4>
+    <p>Binary Search works efficiently because the array is sorted.</p>
+    </div>
+    <div class="section-card">
+    <h3>Procedure</h3>
+    <ol>
+        <li>Start with a sorted array.</li>
+        <li>Take the element that needs to be searched.</li>
+        <li>Find the middle element of the current search range.</li>
+        <li>Compare the middle element with the target element.</li>
+        <li>If they are equal, the target element is found.</li>
+        <li>If the target is greater, Search the right half.</li>
+        <li>If the target is smaller, Search the left half.</li>
+        <li>Repeat the process until the element is found or the search range becomes empty.</li>
+    </ol>
+    </div>
+    <div class="section-card">
+    <h2>Implementation</h2>
+    <h3>Problem</h3>
+    <p>Write a Java program to search for a given element in a sorted array using Binary Search.</p>
+    <pre>
+        <code>
+         import java.util.*;
+         public class Binary_Search{
+            public static void main (String[]args){
+                Scanner sc = new Scanner(System.in);
+                System.out.println("enter no.of elements:");
+                    int n=sc.nextInt();
+                    int[] arr=new int[n];
+                    boolean flag=false;
+                    System.out.println("Enter your elements:");
+                    for(int i=0;i<arr.length;i++){
+                        arr[i]=sc.nextInt();
+                    }
+                    System.out.println("enter your target element:");
+                    int target=sc.nextInt();
+                    int low = 0,high = arr.length-1;
+                    while(low<=high){
+                        int mid = low+(high-low)/2;
+                        if(arr[mid] == target){
+                          System.out.println("Target found at index: "+mid);
+                          flag = true;
+                          break;
+                        }
+                        if(arr[mid] > target){
+                            high = mid-1;
+                        }
+                        else{
+                            low = mid+1;
+                        }
+                    }
+                    if(!flag){
+                        System.out.println("Element not found.");
+                    }
+            }
+         }
+        </code>
+    </pre>
+    </div>
+    <div class="section-card">
+    <h3>Expected Output</h3>
+    <pre>
+        <code>
+            Array: [10, 20, 30, 40, 50]
+            Search element: 40
+            Element found at index: 3
+        </code>
+    </pre>
+    </div>
+    <div class="section-card">
+<h2>Viva</h2>
+<h3>Question 1</h3>
+<p>What is Binary Search?</p>
+<p>Binary Search is a searching technique used to find an element in a sorted array by repeatedly dividing the search range into two halves.</p>
+
+<h3>Question 2</h3>
+<p>What is the main requirement for Binary Search?</p>
+<p>The array must be sorted.</p>
+
+<h3>Question 3</h3>
+<p>What is the time complexity of Binary Search?</p>
+<p>The time complexity is O(log n).</p>
+
+<h3>Question 4</h3>
+<p>How is the middle index calculated in the program?</p>
+<p>The middle index is calculated using: mid = low + (high - low) / 2.</p>
+
+<h3>Question 5</h3>
+<p>What happens when arr[mid] is greater than the target?</p>
+<p>The target is searched in the left half by setting high = mid - 1.</p>
+</div>
+
+<h2>Practice</h2>
+    <h3>Practice Question 1</h3>
+    <div class="practice-card">
+    <p>Given the sorted array [10, 20, 30, 40, 50], what is the index of the element 40?</p>
+    <ul>
+        <li><input type="radio" name="question1" value="1">A)2</li>
+        <li><input type="radio" name="question1" value="2">B)3</li>
+        <li><input type="radio" name="question1" value="3">C)4</li>
+        <li><input type="radio" name="question1" value="4">D)5</li>
+    </ul>
+    <button onclick="checkAnswer(1)">Submit Answer</button>
+    <p id="result1"></p>
+    </div>
+    <div class="practice-card">
+    <h3>Practice Question 2</h3>
+    <p>What is the time complexity of Binary Search in the worst case?</p>
+    <ul>
+        <li><input type="radio" name="question2" value="1">A)O(1)</li>
+        <li><input type="radio" name="question2" value="2">B)O(n)</li>
+        <li><input type="radio" name="question2" value="3">C)O(log n)</li>
+        <li><input type="radio" name="question2" value="4">D)O(n²)</li>
+    </ul>
+    <button onclick="checkAnswer(2)">Submit Answer</button>
+    <p id="result2"></p>
+    </div>
+    <div class="practice-card">
+    <h3>Practice Question 3</h3>
+    <p>What happens if the target element is smaller than the middle element in Binary Search?</p>
+    <ul>
+        <li><input type="radio" name="question3" value="1">A)Search the right half</li>
+        <li><input type="radio" name="question3" value="2">B)Search the left half</li>
+        <li><input type="radio" name="question3" value="3">C)Stop the program</li>
+        <li><input type="radio" name="question3" value="4">D)Sort the array</li>
+    </ul>
+    <button onclick="checkAnswer(3)">Submit Answer</button>
+    <p id="result3"></p>
+    </div>
+    <div class="practice-card">
+    <h3>Practice Question 4</h3>
+    <p>What are the initial values of low and high for an array of 5 elements?</p>
+    <ul>
+        <li><input type="radio" name="question4" value="1">A)low = 0, high = 4</li>
+        <li><input type="radio" name="question4" value="2">B)low = 1, high = 5</li>
+        <li><input type="radio" name="question4" value="3">C)low = 0, high = 5</li>
+        <li><input type="radio" name="question4" value="4">D)low = 1, high = 4</li>
+    </ul>
+    <button onclick="checkAnswer(4)">Submit Answer</button>
+    <p id="result4"></p>
+    </div>
+    <div class="practice-card">
+    <h3>Practice Question 5</h3>
+    <p>What is the initial value of low in Binary Search?</p>
+    <ul>
+        <li><input type="radio" name="question5" value="1">A)-1</li>
+        <li><input type="radio" name="question5" value="2">B)0</li>
+        <li><input type="radio" name="question5" value="3">C)1</li>
+        <li><input type="radio" name="question5" value="4">D)arr.length</li>
+    </ul>
+    <button onclick="checkAnswer(5)">Submit Answer</button>
+    <p id="result5"></p>
+    </div>
+    <a href="java_lab.html">Back to Java Lab</a>
+    <script>
+        const question1 = {
+                number: 1,
+                correctAnswer: 2
+            };
+            const question2 = {
+                number: 2,
+                correctAnswer: 2
+            };
+            const question3 = {
+                number: 3,
+                correctAnswer: 3
+            };
+            const question4 = {
+                number: 4,
+                correctAnswer: 1
+            };
+            const question5 = {
+                number: 5,
+                correctAnswer: 2
+            };
+        function checkAnswer(questionNumber){
+            
+            let currentQuestion;
+            if(questionNumber == 1){
+                currentQuestion = question1;
+            }
+            else if(questionNumber == 2){
+                currentQuestion = question2;
+            }
+            else if(questionNumber == 3){
+                currentQuestion = question3;
+            }
+            else if(questionNumber == 4){
+                currentQuestion = question4;
+            }
+            else{
+                currentQuestion = question5;
+            }
+
+            const correctMessage = "correct!";
+            const selected = document.querySelector('input[name="question'+questionNumber+'"]:checked');
+            const result = document.querySelector("#result"+questionNumber);
+
+            if(selected == null){
+                result.textContent = "Please select an answer!";
+                return;
+            }
+
+            if(selected.value == currentQuestion.correctAnswer){
+                result.textContent = "Question "+currentQuestion.number+": "+correctMessage;
+            }
+            else{
+                result.textContent = "Incorrect! The correct Answer is: "+currentQuestion.correctAnswer;   
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Insertion Sort</title>
+    <link rel="stylesheet" href="experiment.css">
+</head>
+<body>
+    <h1>Insertion Sort</h1>
+    <p>Insertion Sort builds a sorted array one element at a time by taking each element and inserting it into its correct position.</p>
+
+<div class="section-card">
+<h2>Concept</h2>
+<p>
+    Insertion Sort is a simple sorting technique that builds the sorted part
+    of an array one element at a time. It takes the current element and
+    compares it with the elements before it. If the previous elements are
+    greater, they are shifted to the right and the current element is placed
+    in its correct position.
+</p>
+
+<h3>Example:</h3>
+<p>
+    Array: [5, 3, 8, 4, 2]<br>
+    Take 3 → compare with 5 → shift 5 → [3, 5, 8, 4, 2]<br>
+    Take 8 → already in the correct position → [3, 5, 8, 4, 2]<br>
+    Take 4 → shift 8 and 5 → [3, 4, 5, 8, 2]<br>
+    Take 2 → shift 8, 5, 4, and 3 → [2, 3, 4, 5, 8]
+</p>
+</div>
+<div class="section-card">
+<h4>Important</h4>
+<p>
+    Insertion Sort takes one element at a time and inserts it into its
+    correct position in the already sorted part of the array.
+</p>
+
+<h3>Time Complexity</h3>
+<p>Best case: O(n)</p>
+<p>Average case: O(n²)</p>
+<p>Worst case: O(n²)</p>
+</div>
+<div class="section-card">
+<h2>Procedure</h2>
+<ol>
+    <li>Start from the second element of the array.</li>
+    <li>Store the current element as the key.</li>
+    <li>Compare the key with the elements before it.</li>
+    <li>Shift elements greater than the key one position to the right.</li>
+    <li>Insert the key into its correct position.</li>
+    <li>Repeat the same process for the remaining elements.</li>
+    <li>Continue until the entire array is sorted.</li>
+</ol>
+</div>
+<div class="section-card">
+<h2>Implementation</h2>
+
+<h3>Problem</h3>
+<p>
+    Write a Java program to sort an array using the Insertion Sort technique.
+    The program should insert each element into its correct position in the
+    sorted part of the array.
+</p>
+
+<pre>
+    <code>
+        import java.util.*;
+
+        public class Insertion_Sort{
+            public static void main(String[]args){
+
+                Scanner sc=new Scanner(System.in);
+
+                System.out.println("enter no.of elements:");
+                int n=sc.nextInt();
+
+                int[] arr=new int[n];
+
+                System.out.println("Enter your elements:");
+                for(int i=0;i&lt;arr.length;i++){
+                    arr[i]=sc.nextInt();
+                }
+
+                for(int i=1;i&lt;arr.length;i++){
+
+                    int key=arr[i];
+                    int j=i-1;
+
+                    while(j&gt;=0 &amp;&amp; arr[j]&gt;key){
+                        arr[j+1]=arr[j];
+                        j--;
+                    }
+
+                    arr[j+1]=key;
+                }
+
+                System.out.println("Sorted array:");
+
+                for(int i=0;i&lt;arr.length;i++){
+                    System.out.print(arr[i]+" ");
+                }
+            }
+        }
+    </code>
+</pre>
+</div>
+<div class="section-card">
+<h3>Expected Output</h3>
+<pre>
+    <code>
+        enter no.of elements:
+        5
+        Enter your elements:
+        5 3 8 4 2
+        Sorted array:
+        2 3 4 5 8
+    </code>
+</pre>
+</div>
+<div class="section-card">
+<h2>Viva</h2>
+
+<h3>Question 1</h3>
+<p>What is Insertion Sort?</p>
+<p>
+    Insertion Sort is a sorting technique that builds the sorted part of an
+    array one element at a time by inserting each element into its correct position.
+</p>
+
+<h3>Question 2</h3>
+<p>From which element does Insertion Sort usually start?</p>
+<p>
+    Insertion Sort usually starts from the second element because the first
+    element is considered already sorted.
+</p>
+
+<h3>Question 3</h3>
+<p>What is the worst-case time complexity of Insertion Sort?</p>
+<p>
+    The worst-case time complexity is O(n²).
+</p>
+
+<h3>Question 4</h3>
+<p>What happens to elements greater than the key?</p>
+<p>
+    Elements greater than the key are shifted one position to the right.
+</p>
+
+<h3>Question 5</h3>
+<p>What is the best-case time complexity of Insertion Sort?</p>
+<p>
+    The best-case time complexity is O(n), when the array is already sorted.
+</p>
+</div>
+<h2>Practice</h2>
+
+<h3>Practice Question 1</h3>
+<div class="practice-card">
+<p>
+    Given the array [5, 3, 8, 4, 2], what will the array look like after
+    inserting 3 into the sorted part?
+</p>
+<ul>
+    <li><input type="radio" name="question1" value="1">A) [5, 3, 8, 4, 2]</li>
+    <li><input type="radio" name="question1" value="2">B) [3, 5, 8, 4, 2]</li>
+    <li><input type="radio" name="question1" value="3">C) [5, 8, 3, 4, 2]</li>
+    <li><input type="radio" name="question1" value="4">D) [3, 8, 5, 4, 2]</li>
+</ul>
+<button onclick="checkAnswer(1)">Submit Answer</button>
+<p id="result1"></p>
+</div>
+<div class="practice-card">
+<h3>Practice Question 2</h3>
+<p>What is the worst-case time complexity of Insertion Sort?</p>
+<ul>
+    <li><input type="radio" name="question2" value="1">A) O(1)</li>
+    <li><input type="radio" name="question2" value="2">B) O(n)</li>
+    <li><input type="radio" name="question2" value="3">C) O(log n)</li>
+    <li><input type="radio" name="question2" value="4">D) O(n²)</li>
+</ul>
+<button onclick="checkAnswer(2)">Submit Answer</button>
+<p id="result2"></p>
+</div>
+<div class="practice-card">
+<h3>Practice Question 3</h3>
+<p>What happens to elements greater than the key?</p>
+<ul>
+    <li><input type="radio" name="question3" value="1">A) They are deleted.</li>
+    <li><input type="radio" name="question3" value="2">B) They are shifted one position to the right.</li>
+    <li><input type="radio" name="question3" value="3">C) They are moved to the beginning.</li>
+    <li><input type="radio" name="question3" value="4">D) They are ignored permanently.</li>
+</ul>
+<button onclick="checkAnswer(3)">Submit Answer</button>
+<p id="result3"></p>
+</div>
+<a href="java_lab.html">Back to Java Lab</a>
+
+<script>
+    const question1 = {
+        number: 1,
+        correctAnswer: 2
+    };
+
+    const question2 = {
+        number: 2,
+        correctAnswer: 4
+    };
+
+    const question3 = {
+        number: 3,
+        correctAnswer: 2
+    };
+
+    function checkAnswer(questionNumber){
+
+        let currentQuestion;
+
+        if(questionNumber == 1){
+            currentQuestion = question1;
+        }
+        else if(questionNumber == 2){
+            currentQuestion = question2;
+        }
+        else{
+            currentQuestion = question3;
+        }
+
+        const correctMessage = "correct!";
+        const selected = document.querySelector(
+            'input[name="question'+questionNumber+'"]:checked'
+        );
+
+        const result = document.querySelector("#result"+questionNumber);
+
+        if(selected == null){
+            result.textContent = "Please select an answer!";
+            return;
+        }
+
+        if(selected.value == currentQuestion.correctAnswer){
+            result.textContent = "Question "+currentQuestion.number+": "+correctMessage;
+        }
+        else{
+            result.textContent =
+                "Incorrect! The correct Answer is: "+
+                currentQuestion.correctAnswer;
+        }
+    }
+</script>
+```
+
+</body>

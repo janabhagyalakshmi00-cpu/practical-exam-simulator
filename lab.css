@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #172033;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 72px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 15px;
+}
+
+.navbar nav a:hover {
+    color: #2563eb;
+}
+
+
+/* HEADER */
+
+.lab-header {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 20px 45px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 5px;
+
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+.lab-header h1 {
+    font-size: 44px;
+    margin-bottom: 14px;
+}
+
+.lab-header p {
+    max-width: 650px;
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* EXPERIMENTS */
+
+.experiments {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px 60px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.section-title span {
+    color: #2563eb;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 24px;
+}
+
+
+/* EXPERIMENT LIST */
+
+.experiment-list {
+    border-top: 1px solid #dbe2ea;
+}
+
+.experiment {
+    display: grid;
+    grid-template-columns: 55px 1fr 40px;
+    align-items: center;
+
+    padding: 24px 20px;
+
+    text-decoration: none;
+    color: inherit;
+
+    background: white;
+
+    border-bottom: 1px solid #dbe2ea;
+
+    transition: 0.2s;
+}
+
+.experiment:hover {
+    background: #f1f5f9;
+    padding-left: 27px;
+}
+
+.number {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.experiment h3 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.experiment p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.arrow {
+    font-size: 22px;
+    color: #2563eb;
+
+    transition: 0.2s;
+}
+
+.experiment:hover .arrow {
+    transform: translateX(5px);
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    display: block;
+    width: fit-content;
+
+    margin: 0 auto 70px;
+
+    padding: 11px 20px;
+
+    background: #172033;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back-button:hover {
+    background: #2563eb;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 24px;
+
+    text-align: center;
+
+    background: #172033;
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .lab-header {
+        padding-top: 50px;
+    }
+
+    .lab-header h1 {
+        font-size: 36px;
+    }
+
+    .experiment {
+        grid-template-columns: 40px 1fr 30px;
+        padding: 20px 10px;
+    }
+}

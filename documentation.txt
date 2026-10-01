@@ -1,0 +1,311 @@
+# PRACTICAL EXAM SIMULATOR / LAB SIMULATOR
+
+## PROJECT GOAL
+
+Build a website that helps students:
+
+* Learn practical/lab experiments
+* Practice programs
+* Prepare for viva questions
+* Later take mock practical exams
+
+## V1 SCOPE
+
+* No login/authentication
+* Java Lab only
+* Experiment-based structure
+
+Each experiment contains:
+
+1. Concept
+2. Procedure
+3. Implementation
+4. Viva
+5. Practice
+6. Mock Exam (later)
+
+## WEBSITE FLOW
+
+Home
+↓
+Java Lab
+↓
+Experiment List
+↓
+Experiment Page
+↓
+Concept
+Procedure
+Implementation
+Viva
+Practice
+Mock Exam
+
+## FILES CREATED
+
+index.html
+java_lab.html
+linear-search.html
+binary-search.html
+bubble-sort.html
+selection-sort.html
+insertion-sort.html
+
+## JAVA LAB EXPERIMENTS
+
+1. Linear Search
+2. Binary Search
+3. Bubble Sort
+4. Selection Sort
+5. Insertion Sort
+
+## LINEAR SEARCH
+
+Completed sections:
+
+1. Concept
+2. Example
+3. Procedure
+4. Implementation
+5. Expected Output
+6. Viva
+7. Practice
+
+Linear Search concept:
+
+* Searches for an element by checking elements one by one.
+* Works with sorted and unsorted arrays.
+* Best case: O(1)
+* Worst case: O(n)
+* Java arrays use zero-based indexing.
+
+## LINEAR SEARCH PRACTICE
+
+Created an interactive multiple-choice practice section.
+
+Learned JavaScript:
+
+* document.querySelector()
+* :checked
+* .value
+* .textContent
+* onclick
+* JavaScript functions
+* if / else
+* return
+* let
+* const
+* String concatenation
+* data attributes
+
+Built a reusable function:
+
+checkAnswer(questionNumber)
+
+The same function handles multiple questions.
+
+Radio buttons were separated using:
+name="question1"
+name="question2"
+name="question3"
+
+Result elements:
+id="result1"
+id="result2"
+id="result3"
+
+The checked answer is selected dynamically using:
+document.querySelector(
+'input[name="question'+questionNumber+'"]:checked'
+)
+
+Correct answers are stored separately in JavaScript objects.
+
+Current Linear Search practice:
+
+* Question 1 correct answer: B
+* Question 2 correct answer: B
+* Question 3 correct answer: C
+
+Tested:
+
+* Correct answer
+* Wrong answer
+* No answer selected
+
+Linear Search Practice: COMPLETE
+
+## BINARY SEARCH
+
+Started Binary Search experiment.
+
+Completed:
+
+1. Concept
+2. Example
+3. Procedure
+4. Implementation
+
+Binary Search concept:
+
+* Searches for an element in a sorted array.
+* Checks the middle element.
+* Compares the middle element with the target.
+* Eliminates half of the search range.
+* Repeats until the target is found or the search range becomes empty.
+* The array must be sorted.
+
+Example used:
+Array: [10, 20, 30, 40, 50]
+Target: 40
+
+Binary Search:
+30 → search right half → 40 → found
+
+## BINARY SEARCH PROCEDURE
+
+1. Start with a sorted array.
+2. Take the element that needs to be searched.
+3. Find the middle element of the current search range.
+4. Compare the middle element with the target element.
+5. If they are equal, the target element is found.
+6. If the target is greater, search the right half.
+7. If the target is smaller, search the left half.
+8. Repeat until the element is found or the search range becomes empty.
+
+## BINARY SEARCH IMPLEMENTATION
+
+Java program uses:
+
+low
+high
+mid
+target
+flag
+while loop
+break
+
+Important logic:
+
+low = 0
+high = arr.length - 1
+
+mid = low + (high - low) / 2
+
+If:
+arr[mid] == target
+→ target found
+→ flag = true
+→ break
+
+If:
+arr[mid] > target
+→ high = mid - 1
+
+Otherwise:
+→ low = mid + 1
+
+After the loop:
+
+if(!flag)
+→ Element not found.
+
+## BINARY SEARCH STATUS
+
+Concept: COMPLETE
+Example: COMPLETE
+Procedure: COMPLETE
+Implementation: COMPLETE
+
+Remaining:
+
+* Expected Output
+* Viva
+* Practice
+* Testing
+* Confirm completion
+
+## NEXT SESSION
+
+Continue Binary Search with:
+
+1. Expected Output
+2. Viva questions
+3. Practice questions
+4. Test the interactive practice
+5. Confirm Binary Search complete
+
+Then move to the next experiment.
+
+## LEARNING METHOD
+
+For every concept:
+
+UNDERSTAND
+→ BUILD
+→ PRACTICE
+→ FIX DOUBTS
+→ TEST
+→ CONFIRM
+→ CONCEPT COMPLETE
+→ THEN MOVE TO NEXT CONCEPT
+
+## CURRENT OVERALL STATUS
+
+Linear Search: COMPLETE ✅
+Binary Search: IN PROGRESS
+Bubble Sort: Not started yet
+Selection Sort: Not started yet
+Insertion Sort: Not started yet
+
+Today:
+Binary Search Concept + Example + Procedure + Implementation completed.
+
+Today’s Lab Simulator Progress — September 12, 2026
+
+Binary Search Experiment — COMPLETED ✅
+
+Completed sections:
+
+Concept ✅
+Example ✅
+Important Note ✅
+Procedure ✅
+Java Implementation ✅
+Expected Output ✅
+Viva — 5 questions ✅
+Practice — 5 questions ✅
+Reusable JavaScript checkAnswer(questionNumber) ✅
+Tested correct answers ✅
+Tested wrong answers ✅
+Tested no-answer case ✅
+
+Important:
+
+Fixed radio button name values for each question.
+Fixed answer value numbers.
+Fixed HTML closing-tag typo.
+Verified the practice system works correctly.
+
+Current Project Status:
+
+Linear Search ✅ Complete
+Binary Search ✅ Complete
+Next: Bubble Sort
+
+Tomorrow:
+Start Bubble Sort → Concept.
+
+LAB SIMULATOR – SEPTEMBER 18
+
+* Completed Bubble Sort page.
+* Completed Selection Sort page.
+* Completed Insertion Sort page.
+* Added Concept, Procedure, Implementation, Expected Output, Viva and Practice sections.
+* Used the same HTML and JavaScript format as Linear Search.
+* All 5 experiments are now added:
+  Linear Search, Binary Search, Bubble Sort, Selection Sort, Insertion Sort.
+
+NEXT:
+Testing → CSS/UI → JavaScript cleanup → Backend.
+

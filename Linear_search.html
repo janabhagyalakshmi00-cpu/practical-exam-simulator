@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+    <title>Linear Search</title>
+    <link rel="stylesheet" href="experiment.css">
+</head>
+<body>
+    <h1>Linear Search</h1>
+    <p>Linear Search checks each element in an array one by one until the required element is found or the array ends.</p>
+    <div class="section-card">
+    <h2>Concept</h2>
+    <p>Linear Search is a simple searching technique used to find a specific element in an array. It checks each element one by one from the beginning until the required element is found or the end of the array is reached.
+        If the element is found, its position is returned. If it is not found, we indicate that the element does not exist in the array.</p>
+        <h3>Example:</h3>
+        <p>Array: [10, 20, 30, 40, 50]
+        Search element: 30
+        Linear Search checks 10, then 20, and then 30. Since 30 is found, the search stops.</p>
+        </div>
+        <div class="section-card">
+        <h2>Procedure</h2>
+        <ol>
+            <li>Start with the given array of elements.</li>
+            <li>Take the element that needs to be searched.</li>
+            <li>Compare the search element with each array element from the beginning.</li>
+            <li>If a match is found, record its position and stop searching.</li>
+            <li>If the end of the array is reached without finding a match, report that the element is not present.</li>
+        </ol>
+        </div>
+        <div class="section-card">
+    <h2>Implementation</h2>
+    <h3>Problem</h3>
+    <p>Write a Java program to search for a given element in an array using the Linear Search technique. The program should compare the search element with each array element and display its position if it is found. If the element is not present, display an appropriate message.</p>    
+    <pre>
+        <code>
+            import java.util.*;
+            public class Linear_Search{
+                public static void main(String[]args){
+                    Scanner sc=new Scanner(System.in);
+                    System.out.println("enter no.of elements:");
+                    int n=sc.nextInt();
+                    int[] arr=new int[n];
+                    boolean flag=false;
+                    System.out.println("Enter your elements:");
+                    for(int i=0;i<arr.length;i++){
+                        arr[i]=sc.nextInt();
+                    }
+                    System.out.println("enter your target element:");
+                    int target=sc.nextInt();
+                    int i=0;
+                    for(i=0;i<arr.length;i++){
+                        if(arr[i]==target){
+                        flag=true;  
+                        break;
+                    }
+                }
+                if(flag){
+                    System.out.println("Element found at index:"+i);
+                }
+                else{
+                    System.out.println("Element not found");
+                }
+                    }
+                }
+            }
+        </code>
+        </pre>
+        </div>
+        <div class="section-card">
+        <h3>Expected Output</h3>
+    <pre>
+        <code>
+            Array: [10, 20, 30, 40, 50]
+            Search element: 30
+            Element found at index: 2
+        </code>
+    </pre>
+    </div>
+    <div class="section-card">
+        <h2>Viva</h2>
+        <div class="viva-card">
+            <h3>Question 1</h3>
+            <p><strong>What is Linear Search?</strong></p>
+            <p>A searching technique that checks elements one by one until the target is found or the array ends.</p>
+        </div>
+        <div class="viva-card">
+            <h3>Question 2</h3>
+            <p>Can Linear Search work on an unsorted array?<</p>
+            <p>Yes. Linear Search can work on both sorted and unsorted arrays.</p>
+        </div>
+        <div class="viva-card">
+            <h3>Question 3</h3>
+            <p>What is the time complexity of Linear Search?</p>
+            <p>Best case: O(1), Worst case: O(n).</p>
+        </div>
+        <div class="viva-card">
+            <h3>Question 4</h3>
+            <p>What happens if the target element is not present in the array?</p>
+            <p>The entire array is checked and we report that the element was not found.</p>
+        </div>
+        <div class="viva-card">
+            <h3>Question 5</h3>
+            <p>What is the difference between index and position?<</p>
+            <p>Index starts from 0, while position usually starts from 1.</p>
+        </div>
+    </div>
+    <h2>Practice</h2>
+    <h3>Practice Question 1</h3>
+    <div class="practice-card">
+    <p>Given the array [10, 20, 30, 40, 50], what is the index of the element 40 using Linear Search?</p>
+    <ul>
+        <li><input type="radio" name="question1" value="1">A)2</li>
+        <li><input type="radio" name="question1" value="2">B)3</li>
+        <li><input type="radio" name="question1" value="3">C)4</li>
+        <li><input type="radio" name="question1" value="4">D)5</li>
+    </ul>
+    <button onclick="checkAnswer(1)">Submit Answer</button>
+    <p id="result1"></p>
+    </div>
+    <div class="practice-card">
+    <h3>Practice Question 2</h3>
+    <p>What is the time complexity of Linear Search in the worst case?</p>
+    <ul>
+        <li><input type="radio" name="question2" value="1">A)O(1)</li>
+        <li><input type="radio" name="question2" value="2">B)O(n)</li>
+        <li><input type="radio" name="question2" value="3">C)O(log n)</li>
+        <li><input type="radio" name="question2" value="4">D)O(n*n)</li>
+    </ul>
+    <button onclick="checkAnswer(2)">Submit Answer</button>
+    <p id="result2"></p>
+    </div>
+    <div class="practice-card">
+    <h3>Practice Question 3</h3>
+    <p>What happens if the target element is not present in the array?</p>
+    <ul>
+        <li><input type="radio" name="question3" value="1">A)The search stops immediately.</li>
+        <li><input type="radio" name="question3" value="2">B)The first element is returned.</li>
+        <li><input type="radio" name="question3" value="3">C)The entire array is checked.</li>
+        <li><input type="radio" name="question3" value="4">D)The array is sorted.</li>
+    </ul>
+    <button onclick="checkAnswer(3)">Submit Answer</button>
+    <p id="result3"></p>
+    </div>
+    <a href="java_lab.html">Back to Java Lab</a>
+    <script>
+        const question1 = {
+                number: 1,
+                correctAnswer: 2
+            };
+            const question2 = {
+                number: 2,
+                correctAnswer: 2
+            };
+            const question3 = {
+                number: 3,
+                correctAnswer: 3
+            };
+        function checkAnswer(questionNumber){
+            
+            let currentQuestion;
+            if(questionNumber == 1){
+                currentQuestion = question1;
+            }
+            else if(questionNumber == 2){
+                currentQuestion = question2;
+            }
+            else{
+                currentQuestion = question3;
+            }
+
+            const correctMessage = "correct!";
+            const selected = document.querySelector('input[name="question'+questionNumber+'"]:checked');
+            const result = document.querySelector("#result"+questionNumber);
+
+            if(selected == null){
+                result.textContent = "Please select an answer!";
+                return;
+            }
+
+            if(selected.value == currentQuestion.correctAnswer){
+                result.textContent = "Question "+currentQuestion.number+": "+correctMessage;
+            }
+            else{
+                result.textContent = "Incorrect!The correct Answer is: "+currentQuestion.correctAnswer;   
+            }
+        }
+    </script>
+</body>

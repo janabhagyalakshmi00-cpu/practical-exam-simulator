@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Bubble Sort</title>
+    <link rel="stylesheet" href="experiment.css">
+</head>
+<body>
+    <h1>Bubble Sort</h1>
+    <p>Bubble Sort repeatedly compares adjacent elements and swaps them when they are in the wrong order.</p>
+
+<div class="section-card">
+<h2>Concept</h2>
+<p>
+    Bubble Sort is a simple sorting technique used to sort an array.
+    It repeatedly compares adjacent elements. If the left element is
+    greater than the right element, they are swapped. This process is
+    repeated for multiple passes until the array is sorted. After each
+    pass, the largest unsorted element moves to its correct position
+    at the end of the array.
+</p>
+
+<h3>Example:</h3>
+<p>
+    Array: [5, 3, 8, 4, 2]<br>
+    Compare 5 and 3 → swap → [3, 5, 8, 4, 2]<br>
+    Compare 5 and 8 → no swap<br>
+    Compare 8 and 4 → swap → [3, 5, 4, 8, 2]<br>
+    Compare 8 and 2 → swap → [3, 5, 4, 2, 8]<br>
+    After the first pass, 8 reaches its correct position.
+</p>
+</div>
+<div class="section-card">
+<h4>Important</h4>
+<p>
+    Bubble Sort repeatedly compares adjacent elements and swaps them
+    when they are in the wrong order. After each pass, the largest
+    unsorted element moves to the end of the array.
+</p>
+
+<h3>Time Complexity</h3>
+<p>Best case: O(n)</p>
+<p>Average case: O(n²)</p>
+<p>Worst case: O(n²)</p>
+</div>
+<div class="section-card">
+<h2>Procedure</h2>
+<ol>
+    <li>Start with the first element of the array.</li>
+    <li>Compare the current element with the next adjacent element.</li>
+    <li>If the current element is greater than the next element, swap them.</li>
+    <li>Continue comparing adjacent elements until the end of the array is reached.</li>
+    <li>After the first pass, the largest element will be placed at the end.</li>
+    <li>Repeat the same process for the remaining unsorted elements.</li>
+    <li>Continue the passes until the entire array is sorted.</li>
+</ol>
+</div>
+<div class="section-card">
+<h2>Implementation</h2>
+
+<h3>Problem</h3>
+<p>
+    Write a Java program to sort an array using the Bubble Sort technique.
+    The program should compare adjacent elements and swap them when they
+    are in the wrong order.
+</p>
+
+<pre>
+    <code>
+        import java.util.*;
+
+        public class Bubble_Sort{
+            public static void main(String[]args){
+
+                Scanner sc=new Scanner(System.in);
+
+                System.out.println("enter no.of elements:");
+                int n=sc.nextInt();
+
+                int[] arr=new int[n];
+
+                System.out.println("Enter your elements:");
+                for(int i=0;i&lt;arr.length;i++){
+                    arr[i]=sc.nextInt();
+                }
+
+                for(int i=0;i&lt;arr.length-1;i++){
+
+                    for(int j=0;j&lt;arr.length-1-i;j++){
+
+                        if(arr[j]&gt;arr[j+1]){
+                            int temp=arr[j];
+                            arr[j]=arr[j+1];
+                            arr[j+1]=temp;
+                        }
+                    }
+                }
+
+                System.out.println("Sorted array:");
+
+                for(int i=0;i&lt;arr.length;i++){
+                    System.out.print(arr[i]+" ");
+                }
+            }
+        }
+    </code>
+</pre>
+</div>
+<div class="section-card">
+<h3>Expected Output</h3>
+<pre>
+    <code>
+        enter no.of elements:
+        5
+        Enter your elements:
+        5 3 8 4 2
+        Sorted array:
+        2 3 4 5 8
+    </code>
+</pre>
+</div>
+<div class="section-card">
+<h2>Viva</h2>
+
+<h3>Question 1</h3>
+<p>What is Bubble Sort?</p>
+<p>
+    Bubble Sort is a sorting technique that repeatedly compares adjacent
+    elements and swaps them if they are in the wrong order.
+</p>
+
+<h3>Question 2</h3>
+<p>Which elements are compared in Bubble Sort?</p>
+<p>
+    Bubble Sort compares adjacent elements.
+</p>
+
+<h3>Question 3</h3>
+<p>What is the worst-case time complexity of Bubble Sort?</p>
+<p>
+    The worst-case time complexity is O(n²).
+</p>
+
+<h3>Question 4</h3>
+<p>What happens after each pass in Bubble Sort?</p>
+<p>
+    The largest unsorted element moves to its correct position at the end.
+</p>
+
+<h3>Question 5</h3>
+<p>When does swapping occur in ascending order?</p>
+<p>
+    Swapping occurs when the left element is greater than the right element.
+</p>
+</div>
+<h2>Practice</h2>
+
+<h3>Practice Question 1</h3>
+<div class="practice-card">
+<p>
+    Given the array [5, 3, 8, 4, 2], which element reaches the end
+    after the first complete pass of Bubble Sort?
+</p>
+<ul>
+    <li><input type="radio" name="question1" value="1">A) 5</li>
+    <li><input type="radio" name="question1" value="2">B) 3</li>
+    <li><input type="radio" name="question1" value="3">C) 8</li>
+    <li><input type="radio" name="question1" value="4">D) 2</li>
+</ul>
+<button onclick="checkAnswer(1)">Submit Answer</button>
+<p id="result1"></p>
+</div>
+<div class="practice-card">
+<h3>Practice Question 2</h3>
+<p>What is the worst-case time complexity of Bubble Sort?</p>
+<ul>
+    <li><input type="radio" name="question2" value="1">A) O(1)</li>
+    <li><input type="radio" name="question2" value="2">B) O(n)</li>
+    <li><input type="radio" name="question2" value="3">C) O(log n)</li>
+    <li><input type="radio" name="question2" value="4">D) O(n²)</li>
+</ul>
+<button onclick="checkAnswer(2)">Submit Answer</button>
+<p id="result2"></p>
+</div>
+<div class="practice-card">
+<h3>Practice Question 3</h3>
+<p>
+    When does Bubble Sort swap two elements in ascending order?
+</p>
+<ul>
+    <li><input type="radio" name="question3" value="1">A) When the left element is smaller</li>
+    <li><input type="radio" name="question3" value="2">B) When both elements are equal</li>
+    <li><input type="radio" name="question3" value="3">C) When the left element is greater</li>
+    <li><input type="radio" name="question3" value="4">D) Always</li>
+</ul>
+<button onclick="checkAnswer(3)">Submit Answer</button>
+<p id="result3"></p>
+</div>
+<a href="java_lab.html">Back to Java Lab</a>
+
+<script>
+    const question1 = {
+        number: 1,
+        correctAnswer: 3
+    };
+
+    const question2 = {
+        number: 2,
+        correctAnswer: 4
+    };
+
+    const question3 = {
+        number: 3,
+        correctAnswer: 3
+    };
+
+    function checkAnswer(questionNumber){
+
+        let currentQuestion;
+
+        if(questionNumber == 1){
+            currentQuestion = question1;
+        }
+        else if(questionNumber == 2){
+            currentQuestion = question2;
+        }
+        else{
+            currentQuestion = question3;
+        }
+
+        const correctMessage = "correct!";
+        const selected = document.querySelector(
+            'input[name="question'+questionNumber+'"]:checked'
+        );
+
+        const result = document.querySelector("#result"+questionNumber);
+
+        if(selected == null){
+            result.textContent = "Please select an answer!";
+            return;
+        }
+
+        if(selected.value == currentQuestion.correctAnswer){
+            result.textContent = "Question "+currentQuestion.number+": "+correctMessage;
+        }
+        else{
+            result.textContent =
+                "Incorrect! The correct Answer is: "+
+                currentQuestion.correctAnswer;
+        }
+    }
+</script>
+```
+
+</body>

@@ -1,0 +1,212 @@
+BAAGI & KASI — FINAL PRESENTATION SCRIPT
+
+BAAGI — SLIDE 1: INTRODUCTION
+
+Good morning everyone.
+
+We are Team [Team Name], and our team members are Baagi, Karthik, and Kasi.
+
+Our project is called Quantum-Powered UPI Fraud Defence.
+
+The main idea of our project is to detect fraudulent UPI transactions using Artificial Intelligence, Machine Learning, and Quantum Computing.
+
+Although today only two of us are presenting, Karthik is also a part of our team.
+
+I am Baagi, and I mainly worked on understanding the problem, planning the solution, and coordinating the project.
+
+Now I will explain the problem we are trying to solve.
+
+
+BAAGI — SLIDE 2: PROBLEM STATEMENT
+
+UPI has become an important part of digital payments.
+
+As digital payments increase, the risk of fraudulent transactions also becomes an important concern.
+
+A fraudulent transaction can sometimes look similar to a normal transaction, which makes it difficult to detect.
+
+The system needs to study different transaction details and identify unusual patterns.
+
+Another important requirement is speed.
+
+Fraud should be detected as quickly as possible so that suspicious transactions can be identified early.
+
+So, our main problem is:
+
+How can we detect suspicious UPI transactions quickly and accurately using AI, Machine Learning, and Quantum Computing?
+
+
+BAAGI — SLIDE 3: PROPOSED SOLUTION
+
+To solve this problem, we propose a real-time UPI fraud detection system.
+
+For example, imagine a user normally makes small payments like 500 or 1,000 rupees.
+
+Suddenly, a transaction of 50,000 rupees is made to a new receiver.
+
+Our system will check details like the transaction amount, receiver, time, and other transaction patterns.
+
+If the system finds that the transaction is unusual, it can mark it as suspicious and send it for further checking.
+
+The machine learning part helps us identify these suspicious patterns.
+
+The quantum component is then used as part of our fraud detection approach.
+
+So, the basic idea is:
+
+UPI Transaction → Data Processing → AI/ML + Quantum Model → Normal or Suspicious
+
+Our goal is to detect suspicious transactions quickly and help reduce UPI fraud.
+
+My contribution mainly focuses on problem analysis, solution planning, and coordinating the different parts of the project.
+
+Now Kasi will explain what makes our approach different and how quantum computing is used.
+
+
+KASI — SLIDE 4: INNOVATION & UNIQUENESS
+
+Thank you, Baagi.
+
+Now I will explain the innovation and uniqueness of our project.
+
+Our main idea is to combine Artificial Intelligence, Machine Learning, and Quantum Computing for UPI fraud detection.
+
+Traditional fraud detection mainly uses classical machine learning methods to find suspicious patterns in transaction data.
+
+In our project, we add a quantum computing component to this process.
+
+This gives us a hybrid approach, where classical computing and quantum computing work together.
+
+We are not trying to replace the complete system with quantum computing.
+
+Instead, we are exploring where quantum computing can be useful in the fraud detection process.
+
+This combination of classical and quantum computing is the main innovation in our approach.
+
+My contribution mainly focuses on the quantum computing part and understanding how it can be connected to the overall system.
+
+
+KASI — SLIDE 5: QUANTUM COMPUTING APPROACH
+
+Now let's see how quantum computing is used in our solution.
+
+A classical computer uses bits, which have values of 0 or 1.
+
+A quantum computer uses qubits, which can represent quantum states.
+
+In our system, the transaction data is first prepared by the classical part.
+
+Then, the required data is converted into a form that can be used by the quantum circuit.
+
+We create the quantum circuit using Qiskit.
+
+The circuit applies quantum operations to the input data and produces an output after measurement.
+
+This output can then be used along with the classical machine learning process for fraud detection.
+
+So, the basic idea is:
+
+Transaction Data → Classical Processing → Quantum Circuit → Output → Fraud Detection.
+
+This combination of classical and quantum computing is our hybrid approach.
+
+
+KASI — SLIDE 6: QISKIT & TECHNOLOGY STACK
+
+For implementing the quantum part, we use Qiskit.
+
+Qiskit is a framework that helps us create, test, and run quantum circuits.
+
+During development, we can first test our quantum circuit using a simulator.
+
+This helps us check whether the circuit is working correctly before testing it on real quantum hardware.
+
+Our technology stack has both classical and quantum components.
+
+The classical side handles data processing, machine learning, and the main application.
+
+The quantum side contains the quantum circuit created using Qiskit.
+
+Both parts work together as part of the complete fraud detection workflow.
+
+My contribution also includes understanding the technology stack and how the different components can work together.
+
+
+KASI — SLIDE 7: SYSTEM ARCHITECTURE / WORKFLOW
+
+Now I will explain the complete workflow of our system.
+
+First, the system receives the UPI transaction data.
+
+Next, the transaction data is cleaned and prepared.
+
+Then, important information from the transaction is selected and given to the fraud detection model.
+
+The classical machine learning component processes the data.
+
+The quantum component is also used as part of the fraud detection process.
+
+After processing, the system gives a result showing whether the transaction is normal or suspicious.
+
+So, the basic workflow is:
+
+Transaction Data → Data Processing → Feature Preparation → AI/ML + Quantum Model → Fraud Detection Result.
+
+If the transaction looks normal, it can continue normally.
+
+If the transaction looks suspicious, it can be flagged for further checking.
+
+
+KASI — SLIDE 8: IMPLEMENTATION & FEASIBILITY
+
+Now let's look at how we plan to implement the system.
+
+First, we will prepare the transaction dataset and build the classical machine learning part.
+
+Next, we will create the quantum circuit using Qiskit.
+
+We can first test the quantum circuit using a simulator.
+
+After testing both parts, we can connect the classical and quantum components.
+
+Finally, we can compare the results with a suitable classical approach.
+
+This step-by-step process makes the project easier to develop, test, and improve.
+
+It also allows us to understand where the quantum approach can be useful.
+
+
+KASI — SLIDE 9: EXPECTED RESULTS & IMPACT
+
+The main expected result is better identification of suspicious transactions.
+
+We will compare our proposed approach with a suitable classical method.
+
+We can use measures such as accuracy, execution time, and other suitable performance measures.
+
+Instead of assuming that the quantum approach will always be better, we will test it and study the actual results.
+
+Our project can help explore new methods for digital payment security.
+
+It can be useful for banks, payment platforms, and other digital payment services.
+
+
+KASI — SLIDE 10: FUTURE SCOPE & CONCLUSION
+
+There are several possibilities for future development.
+
+We can test the system with larger datasets.
+
+We can include more types of fraud patterns.
+
+We can improve the machine learning model.
+
+We can also test the quantum circuit on real quantum hardware.
+
+The system can also be improved to handle a larger number of transactions.
+
+To conclude, our project combines UPI fraud detection, Artificial Intelligence, Machine Learning, and Quantum Computing.
+
+Our aim is to explore how quantum computing can be used in digital payment fraud detection.
+
+Thank you.
